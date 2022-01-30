@@ -2,11 +2,11 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
     
-    include_once('../../core/initialize.php');                         //initialize the api
+    include_once('../../core/initialize.php');                      //initialize the api
 
-    $user = new User($db);                                        //instantiate user
+    $user = new User($db);                                          //instantiate user
 
-    $result = $user->read();                                       //user query
+    $result = $user->read();                                        //user query
 
     $num = $result->rowCount();                                     //get the row count
 
