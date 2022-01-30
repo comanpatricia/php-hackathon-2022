@@ -13,17 +13,41 @@ You have estimated it takes 4 weeks to build this solution. You have 3 days. Goo
 
 ## Technical documentation
 ### Data and Domain model
-In this section, please describe the main entities you managed to identify, the relationships between them and how you mapped them in the database.
+The main entities: 
+- admins (id, admin_username, token)
+- appointments (id, cnp, room_number, time)
+- programmes (id_progr, id_progr_type, maximum, rooms_id, start_time, end_time)
+- progr_types (id_type, type)
+- rooms (id_room, room_number, progr_type)
+- users (id_type, type)
+
+Relationships:
+- user.cnp is foreign key for appointments.cnp
+- rooms.room_number is foreign key for appointments.room_number
+- progr_types.id_type is foreign key for programmes.id_progr_type
+- rooms.id_room is foreign key for programmes.rooms_id
+- progr_types.id_type is foreign key for rooms.progr_type
+ 
+Mapping: see database.sql file for details and constraints
+
 ### Application architecture
-In this section, please provide a brief overview of the design of your application and highlight the main components and the interaction between them.
+I didn't use a specific architecture, neither laravel or symphony
+
 ###  Implementation
 ##### Functionalities
-For each of the following functionalities, please tick the box if you implemented it and describe its input and output in your application:
 
-[x] Brew coffee \
-[x] Create programme \
-[x] Delete programme \
-[ ] Book a programme 
+[ ] Brew coffee \ I hope I won't surprise you but no coffee these days :(
+[x] Create programme \ you have to introduce the id_progr_type, the maximum, the rooms_id, the start_time, the end_time, the uniq identifier (primary key id_progr) is introduced automatically. If it works the the app will show "Programme created!", else you will se the message "Programme not created!". You can check the database to see the result or can paste "localhost/hackathon/api/admin/read_programme.php" to show all the programmes inserted. 
+[x] Delete programme \ You have to select the id_progr of the program you want to delete. If it works the the app will show "Programme deleted!", else you will se the message "Programme not deleted!". You can check the db to see the result.
+[x] Update programme \ Go update or change the programmes stored into database just by typing all the data you want to store a certain id.
+[X] See the users list \ You can see all the informations about users.
+[X] Admin create an user \ You can create an account just by using cnp with an empty value. This is used to store cnps which will be lately used by users when login.
+[X] Insert an admin \ You have to insert the admin_username which will automatically be hashed with md5 into database and the token which must be empty. While inserted the token get an random token which will be used in header when an admin wants to login.
+[X] See the admins list \ All you can see will be the hashed values from admin username and random values for the tokens.
+[X] See the rooms \ You can see the rooms and the type of programme which every room can facilitate. You can not add, change or modify the rooms.
+[X] See the types of programmes \ You can see the all the types of programmes. You can not add, change or modify these types.
+[ ] Book a programme \ not yet :)
+
 
 ##### Business rules
 Please highlight all the validations and mechanisms you identified as necessary in order to avoid inconsistent states and apply the business logic in your application.
