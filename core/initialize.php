@@ -11,5 +11,6 @@
     require_once(CORE_PATH.DS."room.php");                                                      //core classes
     require_once(CORE_PATH.DS."admin.php");                                                     //core classes
     require_once(CORE_PATH.DS."user.php");                                                      //core classes
+    require_once(CORE_PATH.DS."appointment.php");                                                      //core classes
 
 ?>
