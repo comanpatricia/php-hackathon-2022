@@ -2,7 +2,7 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
     
-    include_once('../../core/initialize.php');                         //initialize the api
+    include_once('../../core/initialize.php');                      //initialize the api
 
     $room = new Room($db);                                          //instantiate room
 

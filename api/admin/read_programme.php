@@ -2,13 +2,13 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
     
-    include_once('../../core/initialize.php');                       //initialize the api
+    include_once('../../core/initialize.php');                      //initialize the api
 
-    $programme = new Programme($db);                              //instantiate programme
+    $programme = new Programme($db);                                //instantiate programme
 
-    $result = $programme->read();                                 //programme query
+    $result = $programme->read();                                   //programme query
 
-    $num = $result->rowCount();                                   //get the row count
+    $num = $result->rowCount();                                     //get the row count
 
     if($num>0){
         $programme_arr = array();

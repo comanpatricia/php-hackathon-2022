@@ -2,7 +2,7 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
     
-    include_once('../../core/initialize.php');                     //initialize the api
+    include_once('../../core/initialize.php');                  //initialize the api
 
     $admin = new Admin($db);                                    //instantiate programme
 
