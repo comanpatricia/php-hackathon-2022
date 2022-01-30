@@ -2,7 +2,7 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
     
-    include_once('../core/initialize.php');                         //initialize the api
+    include_once('../../core/initialize.php');                         //initialize the api
 
     $type = new Type($db);                                          //instantiate type
 
@@ -29,9 +29,5 @@
     {
         echo json_encode(array('message' => 'No types found.'));
     }
-
-
-
-
 
 ?>

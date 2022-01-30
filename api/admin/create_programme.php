@@ -4,7 +4,7 @@
     header('Access-Control-Allow-Methods: POST');
     header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods,Authorization,X-Requested-With');
     
-    include_once('../core/initialize.php');                       //initialize the api
+    include_once('../../core/initialize.php');                       //initialize the api
 
     $programme = new Programme($db);                              //instantiate programme
 

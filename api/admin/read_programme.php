@@ -2,7 +2,7 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
     
-    include_once('../core/initialize.php');                       //initialize the api
+    include_once('../../core/initialize.php');                       //initialize the api
 
     $programme = new Programme($db);                              //instantiate programme
 
@@ -33,9 +33,4 @@
     {
         echo json_encode(array('message' => 'No programmes found.'));
     }
-
-
-
-
-
 ?>
