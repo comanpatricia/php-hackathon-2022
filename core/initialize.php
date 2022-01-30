@@ -7,9 +7,9 @@
 
     require_once(INC_PATH.DS."config.php");                                                     //load the config file first
     require_once(CORE_PATH.DS."programme.php");                                                 //core classes
-    require_once(CORE_PATH.DS."type.php");                                                 //core classes
-    require_once(CORE_PATH.DS."room.php");                                                 //core classes
-    require_once(CORE_PATH.DS."admin.php");                                                 //core classes
-    require_once(CORE_PATH.DS."user.php");                                                 //core classes
+    require_once(CORE_PATH.DS."type.php");                                                      //core classes
+    require_once(CORE_PATH.DS."room.php");                                                      //core classes
+    require_once(CORE_PATH.DS."admin.php");                                                     //core classes
+    require_once(CORE_PATH.DS."user.php");                                                      //core classes
 
 ?>
