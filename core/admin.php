@@ -1,4 +1,5 @@
 <?php
+
 class Admin{
     private $conn;                              //db
     private $table = 'admins';
