@@ -1,10 +1,10 @@
 <?php
 class Programme{
-    private $conn;                          //db
+    private $conn;                              //db
     private $table = 'programmes';
 
     public $progr_type_id;
-    public $maximum;                        //programme properties
+    public $maximum;                            //programme properties
     public $rooms_id;
     public $start_time;
     public $end_time;
