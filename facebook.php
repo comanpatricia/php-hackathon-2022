@@ -1,7 +1,7 @@
 <?php 
     define('APP_NAME', 'HACKATHON');
-    define('APP_ID', '256463106634327');
-    define('APP_SECRET', 'd7e59fad61027e185af2c0b4ea3959ab');
+    define('APP_ID', '');
+    define('APP_SECRET', '');
     define('API_VERSION', 'V2.5');
     define('FB_BASE_URL', 'http://localhost/hackathon/facebook_login/');
 
