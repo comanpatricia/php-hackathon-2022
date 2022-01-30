@@ -2,13 +2,13 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
     
-    include_once('../../core/initialize.php');                      //initialize the api
+    include_once('../../core/initialize.php');                     //initialize the api
 
-    $user = new User($db);                                          //instantiate user
+    $user = new User($db);                                         //instantiate user
 
-    $result = $user->read();                                        //user query
+    $result = $user->read();                                       //user query
 
-    $num = $result->rowCount();                                     //get the row count
+    $num = $result->rowCount();                                    //get the row count
 
     if($num>0){
         $user_arr = array();
@@ -22,7 +22,7 @@
         array_push($user_arr['data'], $user_item);
 
         }
-        echo json_encode($user_arr);                                //convert to json and output
+        echo json_encode($user_arr);                               //convert to json and output
     }
     else
     {
