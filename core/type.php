@@ -1,5 +1,4 @@
 <?php
-
 class Type{
     private $conn;                              //db
     private $table = 'progr_types';
