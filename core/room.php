@@ -1,4 +1,5 @@
 <?php
+
 class Room{
     private $conn;                              //db
     private $table = 'rooms';
