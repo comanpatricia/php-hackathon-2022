@@ -3,7 +3,7 @@ class User{
     private $conn;                              //db
     private $table = 'users';
 
-    public $cnp;                              //admin properties
+    public $cnp;                                //admin properties
 
     public function __construct($db){           //contructor with db conn
         $this->conn = $db;
